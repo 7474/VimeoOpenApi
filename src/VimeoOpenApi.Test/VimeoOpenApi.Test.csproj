@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Vimeo API
+
+Build something great. Vimeo's API supports flexible, high-quality video integration with your custom apps.
+
+The version of the OpenAPI document: 3.4
+
+-->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VimeoOpenApi.Test</RootNamespace>
+    <AssemblyName>VimeoOpenApi.Test</AssemblyName>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VimeoOpenApi\VimeoOpenApi.csproj">
+      <Project>{E6EDB2F7-5D32-4DB5-BEAF-5ED4D94164FC}</Project>
+      <Name>VimeoOpenApi</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
+
