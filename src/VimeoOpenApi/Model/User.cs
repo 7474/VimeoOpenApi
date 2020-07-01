@@ -100,13 +100,57 @@ namespace VimeoOpenApi.Model
         /// <value>The user&#39;s account type:  Option descriptions:  * &#x60;basic&#x60; - The user has a Vimeo Basic subscription.  * &#x60;business&#x60; - The user has a Vimeo Business subscription.  * &#x60;live_business&#x60; - The user has a Vimeo Business Live subscription.  * &#x60;live_premium&#x60; - The user has a Vimeo Premium subscription.  * &#x60;live_pro&#x60; - The user has a Vimeo PRO Live subscription.  * &#x60;plus&#x60; - The user has a Vimeo Plus subscription.  * &#x60;pro&#x60; - The user has a Vimeo Pro subscription.  * &#x60;pro_unlimited&#x60; - The user has a Vimeo PRO Unlimited subscription.  * &#x60;producer&#x60; - The user has a Vimeo Producer subscription. </value>
         [DataMember(Name="account", EmitDefaultValue=false)]
         public AccountEnum Account { get; set; }
+        /// <summary>
+        /// Defines ContentFilter
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ContentFilterEnum
+        {
+            /// <summary>
+            /// Enum Drugs for value: drugs
+            /// </summary>
+            [EnumMember(Value = "drugs")]
+            Drugs = 1,
+
+            /// <summary>
+            /// Enum Language for value: language
+            /// </summary>
+            [EnumMember(Value = "language")]
+            Language = 2,
+
+            /// <summary>
+            /// Enum Nudity for value: nudity
+            /// </summary>
+            [EnumMember(Value = "nudity")]
+            Nudity = 3,
+
+            /// <summary>
+            /// Enum Safe for value: safe
+            /// </summary>
+            [EnumMember(Value = "safe")]
+            Safe = 4,
+
+            /// <summary>
+            /// Enum Unrated for value: unrated
+            /// </summary>
+            [EnumMember(Value = "unrated")]
+            Unrated = 5,
+
+            /// <summary>
+            /// Enum Violence for value: violence
+            /// </summary>
+            [EnumMember(Value = "violence")]
+            Violence = 6
+
+        }
+
 
         /// <summary>
         /// The authenticated user&#39;s content filters.  Option descriptions:  * &#x60;drugs&#x60; - Drugs or alcohol use.  * &#x60;language&#x60; - Profanity or sexually suggestive content.  * &#x60;nudity&#x60; - Nudity.  * &#x60;safe&#x60; - Suitable for all audiences.  * &#x60;unrated&#x60; - No rating.  * &#x60;violence&#x60; - Violent or graphic content. 
         /// </summary>
         /// <value>The authenticated user&#39;s content filters.  Option descriptions:  * &#x60;drugs&#x60; - Drugs or alcohol use.  * &#x60;language&#x60; - Profanity or sexually suggestive content.  * &#x60;nudity&#x60; - Nudity.  * &#x60;safe&#x60; - Suitable for all audiences.  * &#x60;unrated&#x60; - No rating.  * &#x60;violence&#x60; - Violent or graphic content. </value>
         [DataMember(Name="content_filter", EmitDefaultValue=false)]
-        public ContentFilterEnum ContentFilter { get; set; }
+        public List<ContentFilterEnum> ContentFilter { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="User" /> class.
         /// </summary>
@@ -135,7 +179,7 @@ namespace VimeoOpenApi.Model
         /// <param name="uploadQuota">uploadQuota (required).</param>
         /// <param name="uri">The authenticated user&#39;s canonical relative URI. (required).</param>
         /// <param name="websites">The authenticated user&#39;s websites. (required).</param>
-        public User(AccountEnum account = default(AccountEnum), bool availableForHire = default(bool), string bio = default(string), bool canWorkRemotely = default(bool), ContentFilterEnum contentFilter = default(ContentFilterEnum), string createdTime = default(string), string gender = default(string), string link = default(string), string location = default(string), Location locationDetails = default(Location), UserMetadata metadata = default(UserMetadata), string name = default(string), Picture pictures = default(Picture), UserPreferences preferences = default(UserPreferences), string resourceKey = default(string), string shortBio = default(string), List<Skill> skills = default(List<Skill>), UserUploadQuota uploadQuota = default(UserUploadQuota), string uri = default(string), List<UserWebsites> websites = default(List<UserWebsites>))
+        public User(AccountEnum account = default(AccountEnum), bool availableForHire = default(bool), string bio = default(string), bool canWorkRemotely = default(bool), List<ContentFilterEnum> contentFilter = default(List<ContentFilterEnum>), string createdTime = default(string), string gender = default(string), string link = default(string), string location = default(string), Location locationDetails = default(Location), UserMetadata metadata = default(UserMetadata), string name = default(string), Picture pictures = default(Picture), UserPreferences preferences = default(UserPreferences), string resourceKey = default(string), string shortBio = default(string), List<Skill> skills = default(List<Skill>), UserUploadQuota uploadQuota = default(UserUploadQuota), string uri = default(string), List<UserWebsites> websites = default(List<UserWebsites>))
         {
             this.Account = account;
             this.AvailableForHire = availableForHire;

@@ -13847,7 +13847,7 @@
             }
           }
         ],
-        "responses": [  ]
+        "responses": {}
       }
     },
     "/tokens": {
@@ -13883,7 +13883,7 @@
         "tags": [
           "Tutorial\\Essentials"
         ],
-        "responses": [  ]
+        "responses": { }
       }
     },
     "/users": {
@@ -29487,17 +29487,17 @@
           },
           "content_filter": {
             "description": "The authenticated user's content filters.\n\nOption descriptions:\n * `drugs` - Drugs or alcohol use.\n * `language` - Profanity or sexually suggestive content.\n * `nudity` - Nudity.\n * `safe` - Suitable for all audiences.\n * `unrated` - No rating.\n * `violence` - Violent or graphic content.\n",
-            "enum": [
-              "drugs",
-              "language",
-              "nudity",
-              "safe",
-              "unrated",
-              "violence"
-            ],
             "items": {
-              "type": "string",
-              "example": "drugs"
+              "enum": [
+                "drugs",
+                "language",
+                "nudity",
+                "safe",
+                "unrated",
+                "violence"
+                ],
+              "example": "drugs",
+              "type": "string"
             },
             "type": "array"
           },
