@@ -30,6 +30,7 @@ The version of the OpenAPI document: 3.4
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>koudenpa</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>0.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
