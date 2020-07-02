@@ -24,7 +24,7 @@ The version of the OpenAPI document: 3.4
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VimeoOpenApi\VimeoOpenApi.csproj">
-      <Project>{E6EDB2F7-5D32-4DB5-BEAF-5ED4D94164FC}</Project>
+      <Project>{57C4D5AA-8119-4EB8-9BA7-D2AB8CE6A602}</Project>
       <Name>VimeoOpenApi</Name>
     </ProjectReference>
   </ItemGroup>

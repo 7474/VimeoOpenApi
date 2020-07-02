@@ -13,7 +13,7 @@ The version of the OpenAPI document: 3.4
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E6EDB2F7-5D32-4DB5-BEAF-5ED4D94164FC}</ProjectGuid>
+    <ProjectGuid>{57C4D5AA-8119-4EB8-9BA7-D2AB8CE6A602}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VimeoOpenApi</RootNamespace>
@@ -23,10 +23,13 @@ The version of the OpenAPI document: 3.4
     <TargetFramework>netstandard2.0</TargetFramework>
     <FileAlignment>512</FileAlignment>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\VimeoOpenApi.xml</DocumentationFile>
-    <RepositoryUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/7474/VimeoOpenApi.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageProjectUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID</PackageProjectUrl>
-    <PackageReleaseNotes>Minor update</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/7474/VimeoOpenApi</PackageProjectUrl>
+    <PackageReleaseNotes>Generated from a OpenAPI doc</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>koudenpa</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
