@@ -20436,7 +20436,7 @@
         "requestBody": {
           "required": true,
           "content": {
-            "application/vnd.vimeo.video+json": {
+            "application/json": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -21449,7 +21449,7 @@
         "requestBody": {
           "required": true,
           "content": {
-            "application/vnd.vimeo.video+json": {
+            "application/json": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -29522,15 +29522,6 @@
             "example": "New York City",
             "nullable": true,
             "type": "string"
-          },
-          "location_details": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/location"
-              }
-            ],
-            "description": "The user's location details.",
-            "nullable": true
           },
           "metadata": {
             "description": "The authenticated user's metadata.",
