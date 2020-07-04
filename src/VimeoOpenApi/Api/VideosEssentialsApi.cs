@@ -1116,7 +1116,7 @@ namespace VimeoOpenApi.Api
             VimeoOpenApi.Client.RequestOptions localVarRequestOptions = new VimeoOpenApi.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/vnd.vimeo.video+json"
+                "application/json"
             };
 
             // to determine the Accept header
@@ -1183,7 +1183,7 @@ namespace VimeoOpenApi.Api
             VimeoOpenApi.Client.RequestOptions localVarRequestOptions = new VimeoOpenApi.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/vnd.vimeo.video+json"
+                "application/json"
             };
 
             // to determine the Accept header

@@ -168,7 +168,6 @@ namespace VimeoOpenApi.Model
         /// <param name="gender">The authenticated user&#39;s gender (required).</param>
         /// <param name="link">The absolute URL of the authenticated users&#39;s profile page. (required).</param>
         /// <param name="location">The authenticated user&#39;s location. (required).</param>
-        /// <param name="locationDetails">The user&#39;s location details. (required).</param>
         /// <param name="metadata">metadata (required).</param>
         /// <param name="name">The authenticated user&#39;s display name. (required).</param>
         /// <param name="pictures">The active portrait of the authenticated user. (required).</param>
@@ -179,7 +178,7 @@ namespace VimeoOpenApi.Model
         /// <param name="uploadQuota">uploadQuota (required).</param>
         /// <param name="uri">The authenticated user&#39;s canonical relative URI. (required).</param>
         /// <param name="websites">The authenticated user&#39;s websites. (required).</param>
-        public User(AccountEnum account = default(AccountEnum), bool availableForHire = default(bool), string bio = default(string), bool canWorkRemotely = default(bool), List<ContentFilterEnum> contentFilter = default(List<ContentFilterEnum>), string createdTime = default(string), string gender = default(string), string link = default(string), string location = default(string), Location locationDetails = default(Location), UserMetadata metadata = default(UserMetadata), string name = default(string), Picture pictures = default(Picture), UserPreferences preferences = default(UserPreferences), string resourceKey = default(string), string shortBio = default(string), List<Skill> skills = default(List<Skill>), UserUploadQuota uploadQuota = default(UserUploadQuota), string uri = default(string), List<UserWebsites> websites = default(List<UserWebsites>))
+        public User(AccountEnum account = default(AccountEnum), bool availableForHire = default(bool), string bio = default(string), bool canWorkRemotely = default(bool), List<ContentFilterEnum> contentFilter = default(List<ContentFilterEnum>), string createdTime = default(string), string gender = default(string), string link = default(string), string location = default(string), UserMetadata metadata = default(UserMetadata), string name = default(string), Picture pictures = default(Picture), UserPreferences preferences = default(UserPreferences), string resourceKey = default(string), string shortBio = default(string), List<Skill> skills = default(List<Skill>), UserUploadQuota uploadQuota = default(UserUploadQuota), string uri = default(string), List<UserWebsites> websites = default(List<UserWebsites>))
         {
             this.Account = account;
             this.AvailableForHire = availableForHire;
@@ -194,8 +193,6 @@ namespace VimeoOpenApi.Model
             this.Link = link ?? throw new ArgumentNullException("link is a required property for User and cannot be null");
             // to ensure "location" is required (not null)
             this.Location = location ?? throw new ArgumentNullException("location is a required property for User and cannot be null");
-            // to ensure "locationDetails" is required (not null)
-            this.LocationDetails = locationDetails ?? throw new ArgumentNullException("locationDetails is a required property for User and cannot be null");
             // to ensure "metadata" is required (not null)
             this.Metadata = metadata ?? throw new ArgumentNullException("metadata is a required property for User and cannot be null");
             // to ensure "name" is required (not null)
@@ -266,13 +263,6 @@ namespace VimeoOpenApi.Model
         /// <value>The authenticated user&#39;s location.</value>
         [DataMember(Name="location", EmitDefaultValue=true)]
         public string Location { get; set; }
-
-        /// <summary>
-        /// The user&#39;s location details.
-        /// </summary>
-        /// <value>The user&#39;s location details.</value>
-        [DataMember(Name="location_details", EmitDefaultValue=true)]
-        public Location LocationDetails { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadata
@@ -358,7 +348,6 @@ namespace VimeoOpenApi.Model
             sb.Append("  Gender: ").Append(Gender).Append("\n");
             sb.Append("  Link: ").Append(Link).Append("\n");
             sb.Append("  Location: ").Append(Location).Append("\n");
-            sb.Append("  LocationDetails: ").Append(LocationDetails).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Pictures: ").Append(Pictures).Append("\n");
@@ -445,11 +434,6 @@ namespace VimeoOpenApi.Model
                     this.Location.Equals(input.Location))
                 ) && 
                 (
-                    this.LocationDetails == input.LocationDetails ||
-                    (this.LocationDetails != null &&
-                    this.LocationDetails.Equals(input.LocationDetails))
-                ) && 
-                (
                     this.Metadata == input.Metadata ||
                     (this.Metadata != null &&
                     this.Metadata.Equals(input.Metadata))
@@ -526,8 +510,6 @@ namespace VimeoOpenApi.Model
                     hashCode = hashCode * 59 + this.Link.GetHashCode();
                 if (this.Location != null)
                     hashCode = hashCode * 59 + this.Location.GetHashCode();
-                if (this.LocationDetails != null)
-                    hashCode = hashCode * 59 + this.LocationDetails.GetHashCode();
                 if (this.Metadata != null)
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
                 if (this.Name != null)

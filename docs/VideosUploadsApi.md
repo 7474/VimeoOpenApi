@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/vnd.vimeo.video+json
+ - **Content-Type**: application/json
  - **Accept**: application/vnd.vimeo.video+json
 
 ### HTTP response details
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/vnd.vimeo.video+json
+ - **Content-Type**: application/json
  - **Accept**: application/vnd.vimeo.video+json
 
 ### HTTP response details

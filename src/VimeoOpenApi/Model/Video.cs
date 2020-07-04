@@ -87,7 +87,7 @@ namespace VimeoOpenApi.Model
         /// </summary>
         /// <value>The [Creative Commons](http://creativecommons.org/licenses/) license used for the video:  Option descriptions:  * &#x60;by&#x60; - Attribution  * &#x60;by-nc&#x60; - Attribution Non-Commercial  * &#x60;by-nc-nd&#x60; - Attribution Non-Commercial No Derivatives  * &#x60;by-nc-sa&#x60; - Attribution Non-Commercial Share Alike  * &#x60;by-nd&#x60; - Attribution No Derivatives  * &#x60;by-sa&#x60; - Attribution Share Alike  * &#x60;cc0&#x60; - Public Domain Dedication </value>
         [DataMember(Name="license", EmitDefaultValue=false)]
-        public LicenseEnum License { get; set; }
+        public LicenseEnum? License { get; set; }
         /// <summary>
         /// The status code for the availability of the video. This field is deprecated in favor of &#x60;upload&#x60; and &#x60;transcode&#x60;.  Option descriptions:  * &#x60;available&#x60; - The video is available.  * &#x60;quota_exceeded&#x60; - The user&#39;s quota is exceeded with this video.  * &#x60;total_cap_exceeded&#x60; - The user has exceeded their total cap with this video.  * &#x60;transcode_starting&#x60; - Transcoding is beginning for the video.  * &#x60;transcoding&#x60; - Transcoding is underway for the video.  * &#x60;transcoding_error&#x60; - There was an error in transcoding the video.  * &#x60;unavailable&#x60; - The video is unavailable.  * &#x60;uploading&#x60; - The video is being uploaded.  * &#x60;uploading_error&#x60; - There was an error in uploading the video. 
         /// </summary>
@@ -202,13 +202,13 @@ namespace VimeoOpenApi.Model
         /// <param name="contentRating">The content ratings of this video. (required).</param>
         /// <param name="context">context (required).</param>
         /// <param name="createdTime">The time in ISO 8601 format when the video was created. (required).</param>
-        /// <param name="description">A brief explanation of the video&#39;s content. (required).</param>
+        /// <param name="description">A brief explanation of the video&#39;s content..</param>
         /// <param name="duration">The video&#39;s duration in seconds. (required).</param>
         /// <param name="embed">Information about embedding this video. (required).</param>
         /// <param name="height">The video&#39;s height in pixels. (required).</param>
-        /// <param name="language">The video&#39;s primary language. (required).</param>
+        /// <param name="language">The video&#39;s primary language..</param>
         /// <param name="lastUserActionEventDate">The time in ISO 8601 format when the user last modified the video..</param>
-        /// <param name="license">The [Creative Commons](http://creativecommons.org/licenses/) license used for the video:  Option descriptions:  * &#x60;by&#x60; - Attribution  * &#x60;by-nc&#x60; - Attribution Non-Commercial  * &#x60;by-nc-nd&#x60; - Attribution Non-Commercial No Derivatives  * &#x60;by-nc-sa&#x60; - Attribution Non-Commercial Share Alike  * &#x60;by-nd&#x60; - Attribution No Derivatives  * &#x60;by-sa&#x60; - Attribution Share Alike  * &#x60;cc0&#x60; - Public Domain Dedication  (required).</param>
+        /// <param name="license">The [Creative Commons](http://creativecommons.org/licenses/) license used for the video:  Option descriptions:  * &#x60;by&#x60; - Attribution  * &#x60;by-nc&#x60; - Attribution Non-Commercial  * &#x60;by-nc-nd&#x60; - Attribution Non-Commercial No Derivatives  * &#x60;by-nc-sa&#x60; - Attribution Non-Commercial Share Alike  * &#x60;by-nd&#x60; - Attribution No Derivatives  * &#x60;by-sa&#x60; - Attribution Share Alike  * &#x60;cc0&#x60; - Public Domain Dedication .</param>
         /// <param name="link">The link to the video. (required).</param>
         /// <param name="metadata">metadata (required).</param>
         /// <param name="modifiedTime">The time in ISO 8601 format when the video metadata was last modified. (required).</param>
@@ -229,7 +229,7 @@ namespace VimeoOpenApi.Model
         /// <param name="uri">The video&#39;s canonical relative URI. (required).</param>
         /// <param name="user">The video owner. (required).</param>
         /// <param name="width">The video&#39;s width in pixels. (required).</param>
-        public Video(List<Category> categories = default(List<Category>), List<string> contentRating = default(List<string>), VideoContext context = default(VideoContext), string createdTime = default(string), string description = default(string), decimal duration = default(decimal), EmbedSettings embed = default(EmbedSettings), decimal height = default(decimal), string language = default(string), string lastUserActionEventDate = default(string), LicenseEnum license = default(LicenseEnum), string link = default(string), VideoMetadata metadata = default(VideoMetadata), string modifiedTime = default(string), string name = default(string), Project parentFolder = default(Project), string password = default(string), Picture pictures = default(Picture), VideoPrivacy privacy = default(VideoPrivacy), string releaseTime = default(string), string resourceKey = default(string), VideoSpatial spatial = default(VideoSpatial), VideoStats stats = default(VideoStats), StatusEnum status = default(StatusEnum), List<Tag> tags = default(List<Tag>), VideoTranscode transcode = default(VideoTranscode), TypeEnum type = default(TypeEnum), VideoUpload upload = default(VideoUpload), string uri = default(string), User user = default(User), decimal width = default(decimal))
+        public Video(List<Category> categories = default(List<Category>), List<string> contentRating = default(List<string>), VideoContext context = default(VideoContext), string createdTime = default(string), string description = default(string), decimal duration = default(decimal), EmbedSettings embed = default(EmbedSettings), decimal height = default(decimal), string language = default(string), string lastUserActionEventDate = default(string), LicenseEnum? license = default(LicenseEnum?), string link = default(string), VideoMetadata metadata = default(VideoMetadata), string modifiedTime = default(string), string name = default(string), Project parentFolder = default(Project), string password = default(string), Picture pictures = default(Picture), VideoPrivacy privacy = default(VideoPrivacy), string releaseTime = default(string), string resourceKey = default(string), VideoSpatial spatial = default(VideoSpatial), VideoStats stats = default(VideoStats), StatusEnum status = default(StatusEnum), List<Tag> tags = default(List<Tag>), VideoTranscode transcode = default(VideoTranscode), TypeEnum type = default(TypeEnum), VideoUpload upload = default(VideoUpload), string uri = default(string), User user = default(User), decimal width = default(decimal))
         {
             // to ensure "categories" is required (not null)
             this.Categories = categories ?? throw new ArgumentNullException("categories is a required property for Video and cannot be null");
@@ -239,15 +239,10 @@ namespace VimeoOpenApi.Model
             this.Context = context ?? throw new ArgumentNullException("context is a required property for Video and cannot be null");
             // to ensure "createdTime" is required (not null)
             this.CreatedTime = createdTime ?? throw new ArgumentNullException("createdTime is a required property for Video and cannot be null");
-            // to ensure "description" is required (not null)
-            this.Description = description ?? throw new ArgumentNullException("description is a required property for Video and cannot be null");
             this.Duration = duration;
             // to ensure "embed" is required (not null)
             this.Embed = embed ?? throw new ArgumentNullException("embed is a required property for Video and cannot be null");
             this.Height = height;
-            // to ensure "language" is required (not null)
-            this.Language = language ?? throw new ArgumentNullException("language is a required property for Video and cannot be null");
-            this.License = license;
             // to ensure "link" is required (not null)
             this.Link = link ?? throw new ArgumentNullException("link is a required property for Video and cannot be null");
             // to ensure "metadata" is required (not null)
@@ -281,7 +276,10 @@ namespace VimeoOpenApi.Model
             // to ensure "user" is required (not null)
             this.User = user ?? throw new ArgumentNullException("user is a required property for Video and cannot be null");
             this.Width = width;
+            this.Description = description;
+            this.Language = language;
             this.LastUserActionEventDate = lastUserActionEventDate;
+            this.License = license;
             this.ParentFolder = parentFolder;
             this.Password = password;
         }

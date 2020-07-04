@@ -7,13 +7,13 @@ Name | Type | Description | Notes
 **ContentRating** | **List&lt;string&gt;** | The content ratings of this video. | 
 **Context** | [**VideoContext**](VideoContext.md) |  | 
 **CreatedTime** | **string** | The time in ISO 8601 format when the video was created. | 
-**Description** | **string** | A brief explanation of the video&#39;s content. | 
+**Description** | **string** | A brief explanation of the video&#39;s content. | [optional] 
 **Duration** | **decimal** | The video&#39;s duration in seconds. | 
 **Embed** | [**EmbedSettings**](EmbedSettings.md) | Information about embedding this video. | 
 **Height** | **decimal** | The video&#39;s height in pixels. | 
-**Language** | **string** | The video&#39;s primary language. | 
+**Language** | **string** | The video&#39;s primary language. | [optional] 
 **LastUserActionEventDate** | **string** | The time in ISO 8601 format when the user last modified the video. | [optional] 
-**License** | **string** | The [Creative Commons](http://creativecommons.org/licenses/) license used for the video:  Option descriptions:  * &#x60;by&#x60; - Attribution  * &#x60;by-nc&#x60; - Attribution Non-Commercial  * &#x60;by-nc-nd&#x60; - Attribution Non-Commercial No Derivatives  * &#x60;by-nc-sa&#x60; - Attribution Non-Commercial Share Alike  * &#x60;by-nd&#x60; - Attribution No Derivatives  * &#x60;by-sa&#x60; - Attribution Share Alike  * &#x60;cc0&#x60; - Public Domain Dedication  | 
+**License** | **string** | The [Creative Commons](http://creativecommons.org/licenses/) license used for the video:  Option descriptions:  * &#x60;by&#x60; - Attribution  * &#x60;by-nc&#x60; - Attribution Non-Commercial  * &#x60;by-nc-nd&#x60; - Attribution Non-Commercial No Derivatives  * &#x60;by-nc-sa&#x60; - Attribution Non-Commercial Share Alike  * &#x60;by-nd&#x60; - Attribution No Derivatives  * &#x60;by-sa&#x60; - Attribution Share Alike  * &#x60;cc0&#x60; - Public Domain Dedication  | [optional] 
 **Link** | **string** | The link to the video. | 
 **Metadata** | [**VideoMetadata**](VideoMetadata.md) |  | 
 **ModifiedTime** | **string** | The time in ISO 8601 format when the video metadata was last modified. | 

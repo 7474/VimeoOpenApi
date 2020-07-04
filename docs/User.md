@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **Gender** | **string** | The authenticated user&#39;s gender | 
 **Link** | **string** | The absolute URL of the authenticated users&#39;s profile page. | 
 **Location** | **string** | The authenticated user&#39;s location. | 
-**LocationDetails** | [**Location**](Location.md) | The user&#39;s location details. | 
 **Metadata** | [**UserMetadata**](UserMetadata.md) |  | 
 **Name** | **string** | The authenticated user&#39;s display name. | 
 **Pictures** | [**Picture**](Picture.md) | The active portrait of the authenticated user. | 
