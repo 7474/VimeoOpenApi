@@ -9764,7 +9764,7 @@
         "requestBody": {
           "required": true,
           "content": {
-            "application/vnd.vimeo.video+json": {
+            "application/json": {
               "schema": {
                 "type": "object",
                 "properties": {
